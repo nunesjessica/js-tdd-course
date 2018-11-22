@@ -4,7 +4,10 @@
   "description": "Biblioteca de curso de JS com TDD na prática",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,15 @@
   "bugs": {
     "url": "https://github.com/nunesjessica/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/nunesjessica/js-tdd-course#readme"
+  "homepage": "https://github.com/nunesjessica/js-tdd-course#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.4",
+    "mocha": "^5.2.0"
+  }
 }
