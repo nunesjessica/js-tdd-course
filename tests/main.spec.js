@@ -15,17 +15,17 @@ describe('Calc', () => {
     it('should exist the method `sub`', () => {
       expect(sub).to.exist;
       expect(sub).to.be.a('function');
-    })
+    });
 
     it('should exist the method `mult`', () => {
       expect(mult).to.exist;
       expect(mult).to.be.a('function');
-    })
+    });
 
     it('should exist the method `div`', () => {
       expect(div).to.exist;
       expect(div).to.be.a('function');
-    })
+    });
   });
 
   describe('Sum', () => {

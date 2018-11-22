@@ -9,4 +9,4 @@ export {
   sub,
   mult,
   div
-}
+};
